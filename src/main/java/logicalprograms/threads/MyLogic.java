@@ -1,5 +1,7 @@
 package logicalprograms.threads;
 
+import java.util.concurrent.CompletableFuture;
+
 class ThreadLogic {
     private final int n;
     int start =1;
@@ -36,7 +38,7 @@ public class MyLogic {
         int n = 10;
         ThreadLogic logicObj = new ThreadLogic(n);
 
-        Thread th1 = new Thread(()->{
+        /*Thread th1 = new Thread(()->{
             try {
                 logicObj.printOdd();
             } catch (InterruptedException e) {
@@ -52,7 +54,7 @@ public class MyLogic {
             }
         });
         th1.start();
-        th2.start();
+        th2.start();*/
 
         //ExecutorService es = Executors.newFixedThreadPool(2);
 
@@ -74,7 +76,7 @@ public class MyLogic {
 
         //es.shutdown();
 
-        /*CompletableFuture<Void> task1 = CompletableFuture.runAsync(() -> {
+        CompletableFuture<Void> task1 = CompletableFuture.runAsync(() -> {
             try {
                 logicObj.printEven();
             } catch (InterruptedException e) {
@@ -95,7 +97,7 @@ public class MyLogic {
         });
 
         task1.join();
-        System.out.println("Tasks started to execute");*/
+        System.out.println("Tasks started to execute");
         // Wait for both to complete
         //CompletableFuture<Void> combined = CompletableFuture.allOf(task1, task2);
 

@@ -36,6 +36,11 @@ public class ProductExceptCurrentElement {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4};
+        for(int num: arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        System.out.println("==================");
         int[] result = productExceptSelf(arr);
         for(int num: result) {
             System.out.print(num + " ");
